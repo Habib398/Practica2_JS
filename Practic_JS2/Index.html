@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Aided Learning</title>
+</head>
+<body>
+    <script>
+        // Aquí va tu código JavaScript
+        let n1 = Math.floor(Math.random() * 10); // 0 <= n1 < 10
+        let n2 = Math.floor(Math.random() * 10); // 0 <= n2 < 10
+
+        let problemInWords = "What is "+ String(n1) + " + " + String(n2);
+        console.log(problemInWords);
+
+        let userResponse = NaN;
+
+        while (isNaN(userResponse) || userResponse != n1 + n2) {
+            if (isNaN(userResponse)) {
+                alert("Please enter a valid number.");
+            } else {
+                alert("Wrong answer! Try again.");
+            }
+            userResponse = Number(prompt(problemInWords));
+        }
+
+        const messages = ["Well done!", "Very good!", "Correct!", "Keep it up!", "Nice work!"];
+        const r = Math.floor(Math.random() * messages.length);
+        console.log(messages[r]);
+        alert(messages[r]);
+    </script>
+</body>
+</html>
